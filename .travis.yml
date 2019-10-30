@@ -11,8 +11,10 @@ jdk:
  - oraclejdk9
  
 install:
+ - cd EventsTrackerApp
  - ./gradlew assemble
- 
+
+#attempt to help Travis find the gradle file
 script:
  - cd EventsTrackerApp
  - ./gradlew check
