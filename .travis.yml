@@ -9,6 +9,13 @@ language: java
 # https://docs.travis-ci.com/user/reference/trusty/#jvm-clojure-groovy-java-scala-images
 jdk:
  - oraclejdk9
+ 
+install:
+ - ./gradlew assemble
+ 
+script:
+ - cd EventsTrackerApp
+ - ./gradlew check
 
 # Each job in Travis CI has several steps:
 # https://docs.travis-ci.com/user/job-lifecycle/
